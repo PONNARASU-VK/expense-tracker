@@ -1,0 +1,12 @@
+# Python / Django
+venv/
+__pycache__/
+*.pyc
+.env
+staticfiles/
+# Node
+node_modules/
+dist/
+# Editor / OS
+.vscode/
+.DS_Store

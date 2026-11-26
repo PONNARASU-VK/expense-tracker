@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body { background: #eef2ee; color: #12261f; }
+
+/* One entrance moment: the page rises in once on load */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .55s ease-out both; }
+
+/* Bars grow from zero to their value (used for budget + categories) */
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.grow { transform-origin: left; animation: grow .9s cubic-bezier(.2,.8,.2,1) both; }
+
+/* New list rows slide in so you can see what changed */
+@keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+.slide-in { animation: slideIn .35s ease-out both; }
+
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid #0f6b4f; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise, .grow, .slide-in { animation: none; }
+}
